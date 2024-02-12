@@ -27,6 +27,8 @@ id ("com.google.protobuf") version "0.9.1"
 implementation("com.google.protobuf:protobuf-javalite:4.26.0-RC2")
 }
 `
+
+
 `protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:3.25.2"
