@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="name"
+            type="String" />
+        <variable
+            name="pwd"
+            type="String" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/home_back"
+    android:fitsSystemWindows="true"
+    tools:context=".ext.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/txtwelcomeMsg"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/_30sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/honk"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_home" />
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtwelcomeMsg"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:text="@{`This is Your Username :`+ name}" />
+    <TextView
+        android:id="@+id/txtPwd"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:text="@{`This is Your Password :`+ pwd}" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/changeEmail"
+        app:layout_constraintTop_toBottomOf="@id/txtPwd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="@string/change_email"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:backgroundTint="#3E7700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearData"
+        app:layout_constraintTop_toBottomOf="@id/changeEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/clear_data"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:backgroundTint="#3E7700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlogOut"
+        app:layout_constraintTop_toBottomOf="@id/clearData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/clear_data"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:backgroundTint="#3E7700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

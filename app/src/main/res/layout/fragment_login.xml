@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_back"
+        tools:context=".ext.login.LoginFragment">
+
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_150sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/name" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:padding="@dimen/_7sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/txtName"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Enter your name"
+            app:layout_constraintStart_toStartOf="parent"
+             />
+        <TextView
+            android:id="@+id/txtPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            app:layout_constraintTop_toBottomOf="@id/edtEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/edtPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_7sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/txtPwd"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/enter_your_password"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            app:layout_constraintTop_toBottomOf="@id/edtName"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/email" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_7sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/txtEmail"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/enter_your_email"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@id/edtPwd"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:backgroundTint="@color/white"
+            android:text="@string/login"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
