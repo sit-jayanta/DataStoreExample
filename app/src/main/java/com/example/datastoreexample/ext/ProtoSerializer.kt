@@ -10,7 +10,6 @@ import java.io.OutputStream
 object ProtoSerializer : Serializer<ProtoExample> {
     override val defaultValue: ProtoExample = ProtoExample.getDefaultInstance()
 
-
     override suspend fun readFrom(input: InputStream): ProtoExample {
         try {
             return ProtoExample.parseFrom(input)

@@ -43,16 +43,21 @@ class HomeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         preferences = UserPreferences(requireContext())
         proto = ProtoDataStore(requireContext())
+
+        //getting name as live data in setting its value to the text view.
         preferences.getStringData(NAME).asLiveData().observe(requireActivity()) {
             binding.name = it
-
         }
+
+        //getting the value of password here as live data and setting it to the textview.
         preferences.getStringData(PASSWORD).asLiveData().observe(requireActivity()) {
             binding.pwd = it
         }
         binding.clearData.setOnClickListener(this)
         binding.changeEmail.setOnClickListener(this)
         binding.btnlogOut.setOnClickListener(this)
+
+        // data changed in change email fragment also change here
         CoroutineScope(Dispatchers.Main).launch {
             proto.protoFlow.collect{
                 Log.d("email",it)
@@ -77,12 +82,12 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }
     }
 
-    fun clearPref(){
+    private fun clearPref(){
         CoroutineScope(Dispatchers.Main).launch {
             preferences.clearPreference()
         }
     }
-    fun clearProto(){
+    private fun clearProto(){
         CoroutineScope(Dispatchers.Main).launch {
             proto.clearData()
         }

@@ -30,10 +30,4 @@ class ProtoDataStore(private val context: Context) {
         }
     }
 
-
-//    suspend fun getEmail(): String {
-//        return context.ProtoDataStore.data.asLiveData().switchMap {
-//
-//        }
-//    }
 }
